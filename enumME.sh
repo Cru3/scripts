@@ -1,9 +1,11 @@
 #!/bin/bash
 
+####################################################____KALI_LINUX_____###############################################################
+
 
 #proxychains
 echo "READ ME: Runs basic enumeration and vulnerability scripts in the background and generates a unique directory for that target."
-sleep 2.4s
+sleep 1.5s
 tput clear
 
 echo "Please type an IPV4 address to enumerate and press enter."
