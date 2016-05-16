@@ -1,2 +1,2 @@
 # scripts
-Rough scripts and coding
+Rough scripts and coding.
