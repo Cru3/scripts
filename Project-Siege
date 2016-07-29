@@ -1,0 +1,17 @@
+#!/bin/env/python
+
+#Written by Cru3 7/29/2016
+#Alpha version0.01
+#Detection + Fork Outline
+
+from sys import platform as operatingsystem
+#cross-platform python system check. BSD?
+
+if operatingsystem == "linux" or "linux2":
+	print "Linux detected as basic operating system."
+
+elif operatingsystem == "windows" or "cygwin":
+	print "Windows detected as basic operating system."
+
+elif operatingsystem == "darwin":
+	print "Mac OSX detected as basic operating system."
