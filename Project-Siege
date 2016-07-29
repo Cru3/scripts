@@ -6,12 +6,29 @@
 
 from sys import platform as operatingsystem
 #cross-platform python system check. BSD?
+#"in" statement is more flexible for linux and linux2 detections as opposed to ==
 
-if operatingsystem == "linux" or "linux2":
+if "linux" in operatingsystem:
 	print "Linux detected as basic operating system."
 
-elif operatingsystem == "windows" or "cygwin":
+elif "win" or "cyg" in operatingsystem:
 	print "Windows detected as basic operating system."
 
-elif operatingsystem == "darwin":
-	print "Mac OSX detected as basic operating system."
+elif "darwin" in operatingsystem:
+	print "OSX detected as basic operating system."
+	
+elif "hp" in operatingsystem:
+	print "HP-UX detected as basic operating system."
+	
+elif "open" in operatingsystem:
+	print "OpenBSD detected as basic operating system."
+
+elif "free" in operatingsystem:
+	print "FreeBSD detected as basic operating system."
+
+elif "sun" or "sol" in operatingsystem:
+	print "Possibly SunOS or Solarios detected - manual verification necessary."
+	print platform.uname()
+	
+elif "hp" in operatingsystem:
+	print "HP-UX detected as basic operating system."
