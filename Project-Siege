@@ -4,31 +4,47 @@
 #Alpha version0.01
 #Detection + Fork Outline
 
+
+
 from sys import platform as operatingsystem
+import platform
+import os
 #cross-platform python system check. BSD?
 #"in" statement is more flexible for linux and linux2 detections as opposed to ==
 
+asciiart = """
+   SSSSSSSSSSSSSSS                                          SSSSSSSSSSSSSSS hhhhhhh                                llllllllllllll 
+ SS:::::::::::::::S                                       SS:::::::::::::::Sh:::::h                                l:::::ll:::::l 
+S:::::SSSSSS::::::S                                      S:::::SSSSSS::::::Sh:::::h                                l:::::ll:::::l 
+S:::::S     SSSSSSS                                      S:::::S     SSSSSSSh:::::h                                l:::::ll:::::l 
+S:::::S                eeeeeeeeeeee       eeeeeeeeeeee   S:::::S             h::::h hhhhh           eeeeeeeeeeee    l::::l l::::l 
+S:::::S              ee::::::::::::ee   ee::::::::::::ee S:::::S             h::::hh:::::hhh      ee::::::::::::ee  l::::l l::::l 
+ S::::SSSS          e::::::eeeee:::::eee::::::eeeee:::::eeS::::SSSS          h::::::::::::::hh   e::::::eeeee:::::eel::::l l::::l 
+  SS::::::SSSSS    e::::::e     e:::::e::::::e     e:::::e SS::::::SSSSS     h:::::::hhh::::::h e::::::e     e:::::el::::l l::::l 
+    SSS::::::::SS  e:::::::eeeee::::::e:::::::eeeee::::::e   SSS::::::::SS   h::::::h   h::::::he:::::::eeeee::::::el::::l l::::l 
+       SSSSSS::::S e:::::::::::::::::ee:::::::::::::::::e       SSSSSS::::S  h:::::h     h:::::he:::::::::::::::::e l::::l l::::l 
+            S:::::Se::::::eeeeeeeeeee e::::::eeeeeeeeeee             S:::::S h:::::h     h:::::he::::::eeeeeeeeeee  l::::l l::::l 
+            S:::::Se:::::::e          e:::::::e                      S:::::S h:::::h     h:::::he:::::::e           l::::l l::::l 
+SSSSSSS     S:::::Se::::::::e         e::::::::e         SSSSSSS     S:::::S h:::::h     h:::::he::::::::e         l::::::l::::::l
+S::::::SSSSSS:::::S e::::::::eeeeeeee  e::::::::eeeeeeee S::::::SSSSSS:::::S h:::::h     h:::::h e::::::::eeeeeeee l::::::l::::::l
+S:::::::::::::::SS   ee:::::::::::::e   ee:::::::::::::e S:::::::::::::::SS  h:::::h     h:::::h  ee:::::::::::::e l::::::l::::::l
+ SSSSSSSSSSSSSSS       eeeeeeeeeeeeee     eeeeeeeeeeeeee  SSSSSSSSSSSSSSS    hhhhhhh     hhhhhhh    eeeeeeeeeeeeee lllllllllllllll
+ """
+ 
+ print asciiart
+
 if "linux" in operatingsystem:
-	print "Linux detected as basic operating system."
+        print "Linux. Target details as follows: OS, Hostname, Version, Release, Architecture."
+	print platform.uname()
 
-elif "win" or "cyg" in operatingsystem:
-	print "Windows detected as basic operating system."
-
-elif "darwin" in operatingsystem:
-	print "OSX detected as basic operating system."
-	
-elif "hp" in operatingsystem:
-	print "HP-UX detected as basic operating system."
-	
-elif "open" in operatingsystem:
-	print "OpenBSD detected as basic operating system."
-
-elif "free" in operatingsystem:
-	print "FreeBSD detected as basic operating system."
-
-elif "sun" or "sol" in operatingsystem:
-	print "Possibly SunOS or Solarios detected - manual verification necessary."
+elif "win" or in operatingsystem:
+        print "Windows. Target details as follows: OS, Hostname, Version, Release, Architecture."
 	print platform.uname()
 	
-elif "hp" in operatingsystem:
-	print "HP-UX detected as basic operating system."
+elif "darwin" in operatingsystem:
+        print "OSX. Target details as follows: OS, Hostname, Version, Release, Architecture."
+	print platform.uname()
+
+elif "linux" or "darwin" or "win" not in operatingsystem:
+	print "This OS is not covered by the automated program. However, here are the details Python is able to provide. Recommend manual research on the version of the OS for fastest exploitation."
+	print platform.uname()
