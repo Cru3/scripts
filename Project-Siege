@@ -35,7 +35,7 @@ elif "win" in operatingsystem:
 	print platform.uname()
 
 elif "darwin" in operatingsystem:
-	print cleanertext + targetdetails  + cleanertext
+	print cleanertext + targetdetails + cleanertext
 	print platform.uname()
 
 elif "linux" or "win" or "darwin" not in operatingsystem:
