@@ -27,7 +27,7 @@ cleanertext = "\n"
 targetdetails = "Target details as follows: OS, Hostname, Version, Release, Architecture."
 
 if "linux" in operatingsystem:
-        print cleanertext + targetdetails + cleanertext
+	print cleanertext + targetdetails + cleanertext
 	print platform.uname()
 
 elif "win" in operatingsystem:
