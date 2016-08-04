@@ -24,17 +24,18 @@ Of all evil I deem you capable: Therefore I want good from you... -  Friedrich N
 #"in" statement is more flexible than == for os's like linux, linux2, and linux 3
 
 cleanertext = "\n"
+targetdetails = "Target details as follows: OS, Hostname, Version, Release, Architecture."
 
 if "linux" in operatingsystem:
-        print cleanertext + "Target details as follows: OS, Hostname, Version, Release, Architecture." + cleanertext
+        print cleanertext + targetdetails + cleanertext
 	print platform.uname()
 
 elif "win" in operatingsystem:
-	print cleanertext + "Target details as follows: OS, Hostname, Version, Release, Architecture." + cleanertext
+	print cleanertext + targetdetails + cleanertext
 	print platform.uname()
 
 elif "darwin" in operatingsystem:
-	print cleanertext + "Target details as follows: OS, Hostname, Version, Release, Architecture." + cleanertext
+	print cleanertext + targetdetails  + cleanertext
 	print platform.uname()
 
 elif "linux" or "win" or "darwin" not in operatingsystem:
