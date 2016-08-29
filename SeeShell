@@ -29,6 +29,7 @@ targetdetails = "Target details as follows: OS, Hostname, Version, Release, Arch
 if "linux" in operatingsystem:
 	print cleanertext + targetdetails + cleanertext
 	print platform.uname()
+	###I think is the best way to handle the nested if statements...one nested if that refers to a key:value....the key will be the kernel version, the value will be the url for the exploit binary
 
 elif "win" in operatingsystem:
 	print cleanertext + targetdetails + cleanertext
