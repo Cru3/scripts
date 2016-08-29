@@ -39,5 +39,5 @@ elif "darwin" in operatingsystem:
 	print platform.uname()
 
 elif "linux" or "win" or "darwin" not in operatingsystem:
-	print cleanertext + "Operating system not recognized. BSD support to be added later. No automated exploitation available. OS, Hostname, Version, Release, Architecture below." + formatting
+	print cleanertext + "Operating system not recognized. BSD support to be added later. No automated exploitation available. OS, Hostname, Version, Release, Architecture below." + cleanertext
 	print platform.uname()
