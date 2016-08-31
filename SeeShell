@@ -30,18 +30,18 @@ targetDetails = "Target host details as follows: OS, Hostname, Release, Version,
 
 if "linux" in operatingSystem:
         print cleanerText + targetDetails + cleanerText
-	print platform.uname()
-	version = platform.uname() #clean up
+	print platform.uname() #clean up
+	version = platform.uname() 
 	stringParse = re.match('(.*\s[0-9]+\.[0-9]+\.[0-9]+)..', version) #.*\s, thanks Maryland.
 	versionString = stringParse.group(1)
 	kernelVersion = versionString.split (' ', 3)
 	print cleanerText + "Current host kernel version is " + kernelVersion[3]
 
-elif "win" in operatingSystem:
+elif "darwin" in operatingSystem:
 	print cleanerText + targetDetails + cleanerText
 	print platform.uname()
 
-elif "darwin" in operatingSystem:
+elif "win" in operatingSystem:
 	print cleanerText + targetDetails + cleanerText
 	print platform.uname()
 
