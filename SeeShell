@@ -45,7 +45,7 @@ elif "win" in operatingSystem:
 	print cleanerText + targetDetails + cleanerText
 	print platform.uname()
 
-elif "linux" or "win" or "darwin" not in operatingSystem:
+elif "linux" or "darwin" or "win" not in operatingSystem:
 	print cleanerText + "Operating system not recognized. BSD support to be added later. No automated exploitation available. OS, Hostname, Version, Release, Architecture below." + cleanerText
 	print platform.uname()
 	
