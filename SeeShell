@@ -36,7 +36,8 @@ if "linux" in operatingSystem:
 	versionString = stringParse.group(1)
 	kernelVersionString = versionString.split (' ', 3)
 	kernVersion = kernelVersionString[3]
-	print cleanerText + "Current host kernel version is " + kernVersion
+	print cleanerText + "Current host kernel version is " + kernVersion + "Retrieving proper attack vector."
+	
 
 elif "darwin" in operatingSystem:
 	print cleanerText + targetDetails + cleanerText
